@@ -42,7 +42,7 @@ day_before_yesterday_closing_price = day_before_yesterday_data['4. close']
 
 difference = float(yesterday_closing_price) - float(day_before_yesterday_closing_price)
 up_down = '🔻'
-if difference > 0:
+if abs(difference) > 0:
     up_down = '⬆️'
 
 percentage_difference = (difference / float(yesterday_closing_price)) * 100
@@ -64,6 +64,6 @@ else:
     print('Not relevant news for now')
 
 client = Client(TWILIO_SID, TWILIO_API_KEY)
-message = client.messages.create(body=f'{STOCK_NAME}:  {up_down} {round(difference, 2)}\n{news_articles[0]}', from_='+447723352157', to='+447828322303')
+message = client.messages.create(body=f'{STOCK_NAME}:  {up_down} {round(percentage_difference, 2)}%\n{news_articles[0]}', from_='+447723352157', to='+447828322303')
 print(message.status)
 
