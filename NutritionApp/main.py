@@ -6,6 +6,7 @@ from datetime import datetime
 time = datetime.now()
 
 API_ENDPOINT = 'https://trackapi.nutritionix.com/v2/natural/exercise'
+sheety_endpoint = 'https://api.sheety.co/d875da4dd9bf749bb9fc338f4efe3afd/myWorkouts2/sheet1'
 
 query_string = input('Tell me which exercises you did: ')
 
@@ -30,13 +31,11 @@ nutrition_data = response.json()
 # print(nutrition_data['exercises'][0]['duration_min'])
 # print(nutrition_data['exercises'][0]['nf_calories'])
 
-sheety_endpoint = 'https://api.sheety.co/d875da4dd9bf749bb9fc338f4efe3afd/myWorkouts2/sheet1'
-
 # 1tyqNcY1K_PYdNIG_B1S4j2OXC1PkmaevmIzY8HdY_Ko
 
 for exercise in nutrition_data['exercises']:
     body = {
-        'sheet1': {
+        'myWorkouts2': {
             'date': time.strftime('%d/%m/%Y'),
             'time': time.strftime('%T'),
             'exercise': exercise['name'].title(),
