@@ -19,9 +19,20 @@ for tag in all_anchor_tags:
     pass
 
 heading = soup.find(name='h1', id='name')
-print(heading.getText())
+#print(heading.getText())
 sub_heading = soup.find_all(name='h3', attrs='heading')
-print(sub_heading)
+#print(sub_heading)
 
-for sub in sub_heading:
-    print(sub.getText())
+# for sub in sub_heading:
+#     print(sub.getText())
+
+# Using select
+
+heading_2 = soup.select_one('.heading')
+#print(heading_2.getText())
+
+heading_2_all = soup.select('.heading')
+#print(heading_2_all)
+
+for head in heading_2_all:
+    print(head.getText())
