@@ -16,14 +16,14 @@ price_pounds = driver.find_element(By.CLASS_NAME, value="MwTOW")
 # button = driver.find_element(By.ID, value='submit')
 # print(button.size)
 
-documentation_link = driver.find_element(By.CSS_SELECTOR, value='documentation_widget p')
-print(documentation_link.text)
-
-bug_link = driver.find_element(By.XPATH, value='XPATH LINK')
-print(bug_link.text)
-
-
-print(f'The price is {price_pounds.text}')
+# documentation_link = driver.find_element(By.CSS_SELECTOR, value='documentation_widget p')
+# print(documentation_link.text)
+#
+# bug_link = driver.find_element(By.XPATH, value='XPATH LINK')
+# print(bug_link.text)
+#
+#
+# print(f'The price is {price_pounds.text}')
 
 # driver.close()
 #driver.quit()
