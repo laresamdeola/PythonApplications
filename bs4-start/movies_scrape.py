@@ -19,7 +19,7 @@ for movie in movie_name:
     greatest_movies.append(movie_name)
     greatest_movies_position.append(movie_position)
 
-# Create a pandas dataframe to store the titles and positions
+# Create a pandas dataframe to store the titles and positions 
 movie_data_frame = pd.DataFrame({
     'position': greatest_movies_position,
     'title': greatest_movies
