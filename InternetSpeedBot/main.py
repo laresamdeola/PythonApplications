@@ -2,16 +2,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
+from config import TWITTER_PASSWORD
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option('detach', True)
 url = 'https://secure-retreat-92358.herokuapp.com/'
 ip_speed_url = 'https://www.speedtest.net/result/15932161620'
+twitter_url = 'https://twitter.com/'
 
 PROMISED_DOWN = 150
 PROMISED_UP = 10
 TWITTER_EMAIL = 'laresamdeola@gmail.com'
-TWITTER_PASSWORD = 'Dhlawrence27#'
+TWITTER_USERNAME = 'laresamdeola'
 
 
 class InternetSpeedTwitterBot:
@@ -32,13 +34,37 @@ class InternetSpeedTwitterBot:
 
     def click_modal(self):
         base_window = self.driver.window_handles[0]
-        #current_window = self.driver.window_handles[1]
         self.driver.switch_to.window(base_window)
         time.sleep(10)
         accept_button = self.driver.find_element(By.ID, value='onetrust-accept-btn-handler')
         accept_button.click()
         time.sleep(5)
-        # self.driver.switch_to.window(base_window)
+
+    def login_twitter(self):
+        self.driver.get(twitter_url)
+        sign_in_button = self.driver.find_element(By.XPATH, value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/div/div/div[3]/div[5]/a/div')
+        sign_in_button.click()
+        time.sleep(2)
+        base_window = self.driver.window_handles[0]
+        self.driver.switch_to.window(base_window)
+        username = self.driver.find_element(By.NAME, value='text')
+        username.send_keys(TWITTER_USERNAME)
+        next_button = self.driver.find_element(By.XPATH, value='//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[6]')
+        next_button.click()
+        time.sleep(5)
+        base_window = self.driver.window_handles[0]
+        self.driver.switch_to.window(base_window)
+        password = self.driver.find_element(By.NAME, value='password')
+        password.send_keys(TWITTER_PASSWORD)
+        time.sleep(2)
+        login_button = self.driver.find_element(By.XPATH, value='//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div')
+        login_button.click()
+        time.sleep(5)
+
+    def post_twitter(self):
+        post_button = self.driver.find_element(By.)
+
+
 
 
 speed_one = InternetSpeedTwitterBot()
