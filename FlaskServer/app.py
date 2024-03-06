@@ -15,9 +15,16 @@ def text_emphasis(function):
     return wrapper_function
 
 
+def text_underline(function):
+    def wrapper_function():
+        return f'<u>{function()}</u>'
+    return wrapper_function
+
+
 @app.route('/')
 @make_bold
 @text_emphasis
+@text_underline
 def home():
     return 'Hello World!'
 
