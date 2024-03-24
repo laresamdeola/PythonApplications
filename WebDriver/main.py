@@ -9,7 +9,6 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.get(url)
 
 price_pounds = driver.find_element(By.CLASS_NAME, value="MwTOW")
-
 # Searching with Selenium
 # search_bar = driver.find_element(By.NAME, value='q')
 # print(search_bar.get_attribute('placeholder'))
