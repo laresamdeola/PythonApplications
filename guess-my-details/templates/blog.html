@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess My Details</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}"> -->
+</head>
+<body>
+    {% for blog_post in posts: %}
+        <h2 style="color: {{ color }}">{{ blog_post["title"] }}</h2>
+        <h3 >{{ blog_post["subtitle"] }}</h3>
+        <p>{{ blog_post["body"] }}</p>
+    {% endfor %}
+</body>
+</html>

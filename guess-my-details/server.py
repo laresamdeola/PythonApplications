@@ -46,5 +46,20 @@ def guess_page(name):
                            country=country)
 
 
+@app.route('/blogposts')
+def blog():
+    url_blog_posts = "https://api.npoint.io/8c5f2341aec59a6b5852"
+    response_blog_post = requests.get(url_blog_posts)
+    print(response_blog_post)
+    posts = response_blog_post.json()
+    color = 'black'
+    return render_template('blog.html', posts=posts, color=color)
+
+
+@app.route('/about')
+def about():
+    return 'This is the about page'
+
+
 if __name__ == '__main__':
     app.run(debug=True)
