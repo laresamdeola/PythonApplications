@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return 'Welcome'
+    return render_template('home.html')
 
 
 @app.route('/guess/<name>')
@@ -58,7 +58,7 @@ def blog():
 
 @app.route('/about')
 def about():
-    return 'This is the about page'
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
