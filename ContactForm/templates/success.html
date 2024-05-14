@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %} Success {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+        <h1>This is the Success Page!</h1>
+        <a href="{{ url_for('home_page') }}">Home Page</a>
+    {% endblock %}
+</body>
+
+</html>
