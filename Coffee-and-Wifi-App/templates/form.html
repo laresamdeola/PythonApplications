@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %} Form {% endblock %}
+{% block content %}
+    <form action="{{ url_for('add') }}" method="post">
+        <label for="cafename">Cafe Name:</label>
+        <input
+            type="text"
+            id="cafename"
+            placeholder="Enter Cafe name"
+            name="cafename"
+            required
+        />
+        <br />
+        <label>Location:</label>
+        <input
+            type="text"
+            placeholder="Birmingham"
+            name="location"
+            required
+        />
+        <br />
+        <label>Open:</label>
+        <input
+            type="time"
+            placeholder="08:00"
+            name="open"
+            required
+        />
+        <br />
+        <label>Close:</label>
+        <input
+            type="time"
+            placeholder="18:00"
+            name="close"
+            required
+        />
+        <br />
+        <label>Coffee:</label>
+        <input
+            type="text"
+            placeholder="Yes"
+            name="coffee"
+            required
+        />
+        <br />
+        <label>Wifi:</label>
+        <input
+            type="text"
+            placeholder="Yes"
+            name="wifi"
+            required
+        />
+        <br />
+        <label>Power:</label>
+        <input
+            type="text"
+            placeholder="yes"
+            name="power"
+            required
+        />
+        <br />
+        <button type="submit">Add</button>
+    </form>
+{% endblock %}

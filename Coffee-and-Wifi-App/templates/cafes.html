@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} Cafes {% endblock %}
+{% block content %}
+    <h1> All Cafes </h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>{{ fieldnames[0] }}</th>
+                <th>{{ fieldnames[1] }}</th>
+                <th>{{ fieldnames[2] }}</th>
+                <th>{{ fieldnames[3] }}</th>
+                <th>{{ fieldnames[4] }}</th>
+                <th>{{ fieldnames[5] }}</th>
+                <th>{{ fieldnames[6] }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[fieldnames[0]] }}</td>
+            <td>{{ row[fieldnames[1]] }}</td>
+            <td>{{ row[fieldnames[2]] }}</td>
+            <td>{{ row[fieldnames[3]] }}</td>
+            <td>{{ row[fieldnames[4]] }}</td>
+            <td>{{ row[fieldnames[5]] }}</td>
+            <td>{{ row[fieldnames[6]] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('index') }}">Home</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+    {% block title %} Coffee and Wifi App {% endblock %}
+    {% block styling %}
+        {{ super() }}
+        h1 { color: black;}
+    {% endblock %}
+{% block content %}
+    <h1>Coffee and Wifi.</h1>
+    <h3>Want to work in a cafe but need coffee and wifi?</h3>
+    <button><a href="{{ url_for('cafes') }}"> Show Me </a></button>
+{% endblock %}
