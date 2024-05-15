@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block title %} Cafes {% endblock %}
 {% block content %}
-    <h1> All Cafes </h1>
-    <table border="1">
+    <table style="width: 100%;">
+        <caption><h3>All Cafes</h3></caption>
         <thead>
             <tr>
                 <th>{{ fieldnames[0] }}</th>
-                <th>{{ fieldnames[1] }}</th>
+                <th style="width: 45%;">{{ fieldnames[1] }}</th>
                 <th>{{ fieldnames[2] }}</th>
                 <th>{{ fieldnames[3] }}</th>
                 <th>{{ fieldnames[4] }}</th>

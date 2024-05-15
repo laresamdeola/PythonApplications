@@ -39,11 +39,13 @@ def add():
         with open('cafe-data.csv', mode='a', newline='') as data:
             writer = csv.writer(data)
             writer.writerow([cafe_name, location, open_time, close_time, coffee, wifi, power])
-            print(location)
-        return redirect(url_for('cafes', cafe_name=cafe_name,
-                                location=location, open_time=open_time, close_time=close_time,
-                                coffee=coffee, wifi=wifi, power=power))
+            return render_template('success.html')
     return render_template('form.html')
+
+
+@app.route('/success')
+def success():
+    return render_template('success.html')
 
 
 @app.route('/form')
