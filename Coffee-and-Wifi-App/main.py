@@ -36,7 +36,7 @@ def add():
     power = request.form['power']
 
     if cafe_name:
-        with open('cafe-data.csv', mode='a', newline='') as data:
+        with open('cafe-data.csv', mode='a', newline='', encoding='utf-8') as data:
             writer = csv.writer(data)
             writer.writerow([cafe_name, location, open_time, close_time, coffee, wifi, power])
             return render_template('success.html')
