@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="{{ url_for('add_paper') }}" method="post">
+        <label for="title">Paper Title: </label>
+        <input
+            type="text"
+            placeholder="Using Machine Learning for Computer Vision"
+            required
+            name="paper-title"
+            id="title"
+        />
+        <br />
+        <label for="author">Paper Author: </label>
+        <input
+            type="text"
+            placeholder="First Author only"
+            required
+            name="paper-author"
+            id="author"
+        />
+        <br />
+        <button type="submit">Add Paper</button>
+    </form>
+{% endblock %}

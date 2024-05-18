@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title%}Home{% endblock %}
+{% block content %}
+    {% if not papers %}
+        <h3>No research papers yet</h3>
+    {% endif %}
+    <ol>
+        {% for paper in papers %}
+            <li>{{ paper.title }}, {{ paper.author }}</li>
+        {% endfor %}
+    </ol>
+    <a href="{{ url_for('add_paper') }}">Add New Research Paper</a>
+{% endblock %}
