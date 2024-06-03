@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block copy %}
+        <header class="homepage-header translate-page-header">
+            <div>
+                <h1>Igala Translator</h1>
+                <ul>
+                    <li>Contact</li>
+                    <li>Projects</li>
+                    <li>Translate</li>
+                    <li>Home</li>
+                </ul>
+            </div>
+
+            <h1 class="translate-bold-copy">TRANSLATE</h1>
+        </header>
+{% endblock %}
+
+{% block content %}
+    <section class="translate-page-first-section">
+        <form action="/translate" method="post">
+            <label for="english-text">English</label> <br>
+            <input
+                type="text"
+                name="english-text"
+                required
+                placeholder="I love my mother"
+                id="english-text"
+            />
+            <br>
+            <button type="submit">Translate</button>
+        </form>
+
+        <h3>Igala</h3>
+        <p>hello</p>
+    </section>
+
+{% endblock %}

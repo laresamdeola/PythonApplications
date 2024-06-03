@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.homepage-header {
+    height: 363px;
+    background-image: url("../images/home page image 1.jpg");
+    color: white;
+}
+
+.homepage-header h2 {
+    font-size: 45px;
+    line-height: 42.5px;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.homepage-header div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 50%;
+  float: right;
+  margin-top: 1.5%;
+  margin-right: 5%;
+}
+
+.homepage-header div ul li {
+    float: right;
+    display: inline;
+    padding-right: 15%;
+}
+
+.homepage-header div h1 {
+    width: 25%;
+    display: inline-block;
+    font-size: 32px;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    margin-left: 5%;
+    padding-top: 1%;
+}
+
+.first-section-home-page {
+    background-color: black;
+    color: white;
+    padding: 5%;
+}
+
+.first-section-copy-1 {
+    display: inline-block;
+    width: 25%;
+    margin-left: 25%;
+}
+
+.first-section-copy-2 {
+    display: inline-block;
+    width: 40%;
+}
+
+.first-section-copy-1 h3 {
+    font-size: 16px;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    padding-bottom: 2.5%;
+}
+
+.first-section-copy-1 p {
+    font-size: 8px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.first-section-copy-2 h3 {
+    font-size: 16px;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    padding-bottom: 2.5%;
+}
+
+.first-section-copy-2 .learn-more-button {
+    border-radius: 9px;
+    background-color: white;
+    width: 85px;
+    height: 15px;
+    font-size: 7px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 2.5%;
+    padding-top: 1.5%;
+    border: none;
+}
+
+.second-section-home-page {
+    background-image: url("../images/home page image 2.jpg");
+    height: 363px;
+    color: black;
+}
+
+.second-section-home-page div {
+    margin: auto;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.second-section-home-page h3 {
+    font-size: 16px;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    padding-bottom: 0.5%;
+    color: black;
+}
+
+.second-section-home-page p {
+    font-size: 7px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+}
+
+.second-section-home-page button {
+    border-radius: 9px;
+    background-color: white;
+    width: 85px;
+    height: 7.5px;
+    font-size: 7px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    margin-top: 0.75%;
+    border: none;
+    padding: 0.75%;
+    padding-bottom: 1%;
+}
+
+/* ------------------------------------ Footer Styles --------------------------------- */
+
+footer {
+    background-color: rgba(68, 68, 68, 1);
+    color: white;
+    font-size: 7px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+footer .company-footer {
+    width: 10%;
+    margin-left: 15%;
+    list-style-type: none;
+    padding-top: 2.5%;
+}
+
+footer .company-footer li {
+    padding-bottom: 2.5%;
+}
+
+footer .company-footer li:first-child {
+    font-weight: 700px;
+    padding-bottom: 3%;
+}
+
+footer .services-footer {
+    width: 10%;
+    margin-left: 49%;
+    list-style-type: none;
+    padding-top: 2.5%;
+    margin-top: -107px;
+}
+
+footer .services-footer li {
+    padding-bottom: 2.5%;
+}
+
+footer .services-footer li:first-child {
+    font-weight: 700px;
+    padding-bottom: 3%;
+}
+
+footer .contact-footer {
+    width: 10%;
+    margin-left: 82%;
+    list-style-type: none;
+    padding-top: 2.5%;
+    margin-top: -107px;
+}
+
+footer .contact-footer li {
+    padding-bottom: 2.5%;
+}
+
+footer .contact-footer li:first-child {
+    font-weight: 700px;
+    padding-bottom: 3%;
+}
+
+footer p {
+    padding: 1.5%;
+    text-align: center;
+    font-size: 7px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+/* --------------------------------------------- Translate Page Styles ---------------------------------------- */
+
+.homepage-header .translate-bold-copy {
+    text-align: center;
+    padding-top: 5%;
+    font-size: 80px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.translate-page-header {
+    background-image: url("../images/translate page image 1.jfif");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.translate-page-first-section {
+    background-color: black;
+    color: white;
+    height: 363px;
+}
+
+.translate-page-first-section p {
+    background-color: white;
+    color: black;
+}
+
+.translate-page-first-section form {
+    padding-left: 5%;
+}

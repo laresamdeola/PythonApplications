@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='css/styles.css') }}" />
+    <style>
+        {% block styling %}{% endblock %}
+    </style>
+</head>
+<body>
+    {% block copy %}{% endblock %}
+
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <ul class="company-footer">
+            <li>Company</li>
+            <li>Careers</li>
+            <li>Projects</li>
+            <li>Contacts</li>
+        </ul>
+
+        <ul class="services-footer">
+            <li>Services</li>
+            <li>Consulting</li>
+            <li>Design</li>
+            <li>Support</li>
+        </ul>
+
+        <ul class="contact-footer">
+            <li>Contact</li>
+            <li>Support</li>
+            <li>Email</li>
+            <li>Phone</li>
+        </ul>
+
+        <section>
+            <img />
+            <img />
+            <img />
+            <img />
+        </section>
+        <p>@ 2024 Igala Translator. All rights reserved.</p>
+    </footer>
+</body>
+</html>
