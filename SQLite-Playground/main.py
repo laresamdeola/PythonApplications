@@ -49,5 +49,28 @@ with app.app_context():
 # cursor.execute("CREATE TABLE books (id INTEGER PRIMARY KEY, title varchar(250) NOT NULL UNIQUE, author varchar(250) NOT NULL, rating FLOAT NOT NULL)")
 
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+# read single record
+with app.app_context():
+    result = db.session.execute(db.select(Book).where(Book.title == "The lion and the jewel")).scalar()
+
+
+# update a record by primary key
+book_id = 1
+with app.app_context():
+    book_to_update = db.session.execute(db.select(Book).where(Book.id == book_id)).scalar()
+    # or book_to_update = db.get_or_404(Book, book_id)
+    book_to_update.title = "The lion and the jewel"
+    db.session.commit()
+
+
+# delete a record
+book_id = 2
+with app.app_context():
+    book_to_delete = db.session.execute(db.select(Book).where(Book.id == book_id)).scalar()
+    # or book_to_delete = db.get_or_404(Book, book_id)
+    db.session.delete(book_to_delete)
+    db.session.commit()
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
