@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automated Paper Review</title>
+</head>
+<body>
+    <h1>Automated Paper Review</h1>
+    <form action="/review" method="post">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+        <label for="abstract">Abstract:</label><br>
+        <textarea id="abstract" name="abstract"></textarea><br><br>
+        <label for="introduction_background">Introduction and Background:</label><br>
+        <textarea id="introduction_background" name="introduction_background"></textarea><br><br>
+        <label for="methodology">Methodology:</label><br>
+        <textarea id="methodology" name="methodology"></textarea><br><br>
+        <label for="results_discussion">Results and Discussion:</label><br>
+        <textarea id="results_discussion" name="results_discussion"></textarea><br><br>
+        <label for="conclusion">Conclusion:</label><br>
+        <textarea id="conclusion" name="conclusion"></textarea><br><br>
+        <label for="references">References:</label><br>
+        <textarea id="references" name="references"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
